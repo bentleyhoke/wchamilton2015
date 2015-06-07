@@ -1,0 +1,16 @@
+<h2>Add Note</h2>
+
+<%= form_tag("/posts/create", method: "post") do %>
+	<fieldset>
+		<%= text_field_tag(:title, nil, class: 'long', placeholder: 'Title') %>
+	</fieldset>
+	<fieldset>
+		<%= text_field_tag(:lat, nil, class: 'short left') %><%= text_field_tag(:lng, nil, class: 'short') %>
+	</fieldset>
+	<fieldset>
+		<%= text_area_tag(:body, nil, size: "25x10") %>
+	</fieldset>
+	<fieldset>
+		<%= submit_tag("Go") %>
+	</fieldset>
+<% end %>

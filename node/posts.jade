@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    title WordCamp Notes
+    link(href='/css/app.css', rel='stylesheet')
+
+  body
+    header
+      div(id="main")
+        h1 This is Node.js
+        - each post in posts
+          div(class="post")
+            h2
+              a(href="/post/#{post.ID}") !{post.title}
+            !{new Date(post.date).toDateString()} | !{post.author.name}
+            !{post.content}

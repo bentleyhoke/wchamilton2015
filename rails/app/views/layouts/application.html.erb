@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WordCamp Hamilton 2015</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div id="main">
+	<header>
+		<h1>This is Ruby on Rails</h1>
+	</header>
+	<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
+	<%= yield %>
+</div>
+</body>
+</html>
